@@ -8,7 +8,8 @@ export class StringCalculatorService {
 
   add(numbers: string): number {
     if (numbers === '') return 0;
-    return numbers
+    const normalizedNumbers = numbers.replace(/\n/g, ',');
+    return normalizedNumbers
       .split(',')
       .map(Number)
       .reduce((a, b) => a + b, 0);
