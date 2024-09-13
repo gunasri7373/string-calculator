@@ -17,4 +17,8 @@ describe('StringCalculatorService', () => {
   it('should return the number itself for a single number', () => {
     expect(service.add('1')).toEqual(1);
   });
+
+  it('should return the sum of two numbers separated by comma', () => {
+    expect(service.add('1,5')).toEqual(6);
+  });
 });
